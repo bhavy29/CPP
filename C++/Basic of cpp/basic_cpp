@@ -1,0 +1,194 @@
+Low level ---> 0 1
+High level ---> Logical level, c and c++
+Extension of C language.
+Fast program.
+More control on system resourses and memory management.
+High performance.
+
+-----first.cpp-----
+BASIC SYNTEX
+         
+                    #include<iostream>        //Header file, it help us to input and output.
+                    using namespace std;      // std::cout<< "Hello World!"<<endl;
+
+                    int main(){               //Main function & int gives information that function return type is 0.
+
+                        cout<< "Hello World!"<<endl;   // cout is for output.
+                    
+                        return 0;             // For void main, we will not write return
+                    }
+
+VARIABLES--> They are containers to store the data.
+             ex.  a=1;b=2;  here a and b are vaiables.
+    Types of variables--> int,float,char,double,boolean
+---------------------------------------------------------------------------------------------------------
+
+-----tut2-----
+    Scope--> 1. Local variable  // They are declare in any function.
+             2. Global variable // They are declare outside to main function.  
+
+COMMENTS--> // This is comment.
+           
+            /*This 
+              is multiple line 
+              comments*/
+
+DATA TYPES--> Type of data a variable can hold.
+              1. Bulit in--> int,char,float,double,bool
+              2. User defined--> struct,union,enum
+              3. Derived--> array,function,pointer 
+
+RULES TO DECLARE VARIABLES-->
+        1. Variables name can range from 1 to 255
+        2. Start with letter or _
+        3. A is not equal to a.
+        4. Can not use reserved keyword ex. int,for,if,do
+
+BASIC INPUT OUTPUT-->
+        1. cout<<"Bhavy";  // << insertion operator.
+        2. cin>>num;       // >> extraction operator.
+
+HEADER FILE-->
+        1. System header file--> #include<iostream>
+        2. Usere defined header file-->  #incluse "this.h" // we have to generate this.cpp in current directory.
+
+OPERATORS--> 1. Arithmetic--> +,-,*,/,%,++,--
+             2. Assignment--> =
+             3. Comparision--> ==,<=,>=,!=,<,>
+             4. Logical--> &&,||,!
+             5. Scope resolution--> :: // If we use global variable in any place ex. if a is global vaiable, [::a]
+             
+sizeof--> for get the size of any variable.
+
+---------------------------------------------------------------------------------------------------------
+
+-----tut3-----
+
+REFERENCE VARIABLE--> 
+                        int x = 45;
+                        int &y = x;
+                        cout<<x<<endl;
+                        cout<<y<<endl;    // Ans is 45
+
+TYPE CASTING--> 
+                float a = 45.5;
+                cout<<"The value of a is "<<(int)a;   // (int)b == int(b)
+
+CONSTANTS--> const int a = 3;  // We can't change value of a.
+
+MANIPULTORS-->  setw 
+
+
+OPERATOR PRECEDENCE--> 
+                        //go to operator precedence table.
+---------------------------------------------------------------------------------------------------------
+
+-----tut4-----                      
+CONTROL STRUCTURE-->
+
+---------------------------------------------------------------------------------------------------------
+
+-----tut5-----
+BREAK & CONTINUE--> 
+                    1. break--> exit from current loop 
+                    2. continue--> skip the current line 
+---------------------------------------------------------------------------------------------------------
+
+-----tut6-----
+POINTERS--> It save the address of any variable.
+            
+            int a = 10;
+            int *ptr = &a;     // ptr variable stores th address of a.
+
+            // * --> value at
+            // & --> address of 
+---------------------------------------------------------------------------------------------------------
+
+-----tut7-----
+ARRAYS--> An array is a collection of items of similar type store in contiguous memory location.
+          it store same data type constants.
+
+          Arrays and Pointers 
+                        int a[10];
+                        int *p = a;
+                        
+                        cout<<"The value of a[0] is "<<*p;   // value of a[0] using ponter
+                        cout<<"The value of a[1] is "<<*(p+1);
+---------------------------------------------------------------------------------------------------------
+
+-----tut8-----
+STRUCTURE-->
+             in given example we know that float use 8, int use 4 bit, char use 1 bit memory, than our total structure  size is 8 + 4 + 1 bit.
+
+                struct employee
+                {
+                        int id;
+                        char favChar;
+                        float salary;
+                };
+
+         
+UNION--> like structure 
+         it use memory at a time 
+         in given example we know that float use 8 bit memory, than our total union size is 8 bit.
+         share memory
+                 union employee
+                {
+                        int id;
+                        char favChar;
+                        float salary;
+                };
+
+ENUM--> enum Meal {breakfast, lunch, dinner};
+                 
+                 cout<<breakfast;  // output is 0
+                 cout<<lunch;      // output is 1
+                 cout<<dinner;     // output is 2
+---------------------------------------------------------------------------------------------------------
+
+-----tut9-----
+FUNCTION-->
+ 
+        int sum(int x, int y);     // It is function declaration or function prototype.
+                                   // In definition and decaration we use formal parameters.
+                                   // If we use void hello function, so we should not write return. 
+
+        int main(){
+
+                // we call our sum function in main. 
+                // in main function, we give actual parameters 
+        }
+
+        int sum(a,b){              // it is function definition.
+
+                int c = a + b;
+                return c;
+        }
+---------------------------------------------------------------------------------------------------------
+
+-----tut10-----
+CALL BY VALUE--> Actual arguments will copy in formal arguments.
+                 No change in actual arguments                     
+
+CALL BY REFERENCE--> Address of actual argument will pass using pointers.
+---------------------------------------------------------------------------------------------------------
+
+-----tut11-----
+
+INLINE FUNCTION--> If we call one function multiple type than it is very extra overhead, than we use inline function it is use to rplace function call to code. 
+                   We should not use inline in recursion.
+                   We ca not use in static variable like in code, if we do a++ or a-- 
+                   Inshort ans of function is copy to function call.
+---------------------------------------------------------------------------------------------------------
+
+-----tut12-----
+RECURSION--> Function call it self.
+
+---------------------------------------------------------------------------------------------------------
+
+-----tut13-----
+FUNCTION OVERLOADING--> Diffrent function but with same name.
+
+---------------------------------------------------------------------------------------------------------
+ 
+                
